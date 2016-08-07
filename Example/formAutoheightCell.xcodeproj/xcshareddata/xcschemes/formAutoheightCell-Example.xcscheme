@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "form-autoheight-cell_Example.app"
-               BlueprintName = "form-autoheight-cell_Example"
-               ReferencedContainer = "container:form-autoheight-cell.xcodeproj">
+               BuildableName = "formAutoheightCell_Example.app"
+               BlueprintName = "formAutoheightCell_Example"
+               ReferencedContainer = "container:formAutoheightCell.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "form-autoheight-cell_Tests.xctest"
-               BlueprintName = "form-autoheight-cell_Tests"
-               ReferencedContainer = "container:form-autoheight-cell.xcodeproj">
+               BuildableName = "formAutoheightCell_Tests.xctest"
+               BlueprintName = "formAutoheightCell_Tests"
+               ReferencedContainer = "container:formAutoheightCell.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "form-autoheight-cell_Tests.xctest"
-               BlueprintName = "form-autoheight-cell_Tests"
-               ReferencedContainer = "container:form-autoheight-cell.xcodeproj">
+               BuildableName = "formAutoheightCell_Tests.xctest"
+               BlueprintName = "formAutoheightCell_Tests"
+               ReferencedContainer = "container:formAutoheightCell.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "form-autoheight-cell_Example.app"
-            BlueprintName = "form-autoheight-cell_Example"
-            ReferencedContainer = "container:form-autoheight-cell.xcodeproj">
+            BuildableName = "formAutoheightCell_Example.app"
+            BlueprintName = "formAutoheightCell_Example"
+            ReferencedContainer = "container:formAutoheightCell.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "form-autoheight-cell_Example.app"
-            BlueprintName = "form-autoheight-cell_Example"
-            ReferencedContainer = "container:form-autoheight-cell.xcodeproj">
+            BuildableName = "formAutoheightCell_Example.app"
+            BlueprintName = "formAutoheightCell_Example"
+            ReferencedContainer = "container:formAutoheightCell.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "form-autoheight-cell_Example.app"
-            BlueprintName = "form-autoheight-cell_Example"
-            ReferencedContainer = "container:form-autoheight-cell.xcodeproj">
+            BuildableName = "formAutoheightCell_Example.app"
+            BlueprintName = "formAutoheightCell_Example"
+            ReferencedContainer = "container:formAutoheightCell.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

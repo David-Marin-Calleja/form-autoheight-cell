@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'form-autoheight-cell_Example' do
-  pod 'form-autoheight-cell', :path => '../'
+target 'formAutoheightCell_Example' do
+  pod 'formAutoheightCell', :path => '../'
 
-  target 'form-autoheight-cell_Tests' do
+  target 'formAutoheightCell_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.8'

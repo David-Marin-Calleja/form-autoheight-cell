@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import form-autoheight-cell
+import formAutoheightCell
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
