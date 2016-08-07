@@ -22,7 +22,7 @@ pod "form-autoheight-cell"
 
 ## Author
 
-David, david.marin.calleja@gmail.com
+David Marin Calleja
 
 ## License
 
