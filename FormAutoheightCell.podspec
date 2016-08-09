@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FormAutoheightCell'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'InputForm into cell with auto heigh.'
 
 # This description is used to generate tags and improve search results.
@@ -21,20 +21,20 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/FormAutoheightCell'
+  s.homepage         = 'https://github.com/David-Marin-Calleja/form-autoheight-cell'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'David' => 'David Marín Calleja' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/FormAutoheightCell.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/David-Marin-Calleja/form-autoheight-cell.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'FormAutoheightCell/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'FormAutoheightCell' => ['FormAutoheightCell/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'FormAutoheightCell' => ['FormAutoheightCell/Assets/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

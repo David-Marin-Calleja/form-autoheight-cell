@@ -11,8 +11,23 @@ import UIKit
 
 public class AutoheightTableView : UITableViewController {
     
+    static let CELL_IDENTIFIER = "form_cell_identifier"
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        let podBundle = NSBundle(forClass: self.classForCoder)
+        if let bundleURL = podBundle.URLForResource("FormAutoheightCell", withExtension: "bundle") {
+            
+            if let bundle = NSBundle(URL: bundleURL) {
+                let cellNib = UINib(nibName: "SimpleFormCell", bundle: bundle)
+                tableView.registerNib(cellNib, forCellReuseIdentifier: AutoheightTableView.CELL_IDENTIFIER)
+            } else {
+                assertionFailure("Could not load the bundle")
+            }
+        }else {
+            assertionFailure("Could not create a path to the bundle")
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -26,7 +41,7 @@ public class AutoheightTableView : UITableViewController {
     
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //TODO: CellIdentifier
-        let cell = tableView.dequeueReusableCellWithIdentifier("TODO", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(AutoheightTableView.CELL_IDENTIFIER, forIndexPath: indexPath) as UITableViewCell
         
         // Configure the cell...
         cell.textLabel?.text = "cell";
