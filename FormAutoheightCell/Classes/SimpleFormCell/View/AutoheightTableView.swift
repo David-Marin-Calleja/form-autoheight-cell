@@ -1,17 +1,16 @@
 //
-//  AutoheightTableView.swift
-//  Pods
-//
-//  Created by David Marín Calleja on 07/08/16.
-//
+// Created by David
+// Copyright (c) 2016 David. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public class AutoheightTableView : UITableViewController {
-    
+class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
+{
     static let CELL_IDENTIFIER = "form_cell_identifier"
+    
+    var presenter: SimpleFormCellPresenterProtocol?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -57,5 +56,5 @@ public class AutoheightTableView : UITableViewController {
         if editingStyle == .Delete {
         }
     }
-
+    
 }
