@@ -7,8 +7,11 @@ target 'FormAutoheightCell_Example' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+    pod 'Nimble', '~> 3.0'
+    pod 'FBSnapshotTestCase'
+    pod 'Nimble-Snapshots'
+    
+    pod 'Alamofire', '~> 3.4'
+    pod 'AlamofireObjectMapper', '~> 3.0'
   end
 end

@@ -7,11 +7,12 @@ import Foundation
 
 class SimpleFormCellWireFrame: SimpleFormCellWireFrameProtocol
 {
-    class func presentSimpleFormCellModule(fromView view: AnyObject)
+    class func presentSimpleFormCellModule(fromView view: SimpleFormCellViewProtocol,
+                                               presenter: SimpleFormCellPresenter)
     {
         // Generating module components
-        var view: SimpleFormCellViewProtocol = AutoheightTableView()
-        var presenter: protocol<SimpleFormCellPresenterProtocol, SimpleFormCellInteractorOutputProtocol> = SimpleFormCellPresenter()
+//        var view: SimpleFormCellViewProtocol = AutoheightTableView()
+//        var presenter: protocol<SimpleFormCellPresenterProtocol, SimpleFormCellInteractorOutputProtocol> = SimpleFormCellPresenter()
         var interactor: SimpleFormCellInteractorInputProtocol = SimpleFormCellInteractor()
         var APIDataManager: SimpleFormCellAPIDataManagerInputProtocol = SimpleFormCellAPIDataManager()
         var localDataManager: SimpleFormCellLocalDataManagerInputProtocol = SimpleFormCellLocalDataManager()

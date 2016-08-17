@@ -15,7 +15,8 @@ protocol SimpleFormCellViewProtocol: class
 
 protocol SimpleFormCellWireFrameProtocol: class
 {
-    static func presentSimpleFormCellModule(fromView view: AnyObject)
+    static func presentSimpleFormCellModule(fromView view: SimpleFormCellViewProtocol,
+                                                presenter: SimpleFormCellPresenter)
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
@@ -29,6 +30,8 @@ protocol SimpleFormCellPresenterProtocol: class
     /**
     * Add here your methods for communication VIEW -> PRESENTER
     */
+    func numberOfCells (completionHandler: (ListOfCellsInfo?, NSError?)->() )
+    func setupWireFrame(theView: SimpleFormCellViewProtocol)
 }
 
 protocol SimpleFormCellInteractorOutputProtocol: class
@@ -46,6 +49,7 @@ protocol SimpleFormCellInteractorInputProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> INTERACTOR
     */
+    func numberOfCells (completionHandler: (ListOfCellsInfo?, NSError?)->() )
 }
 
 protocol SimpleFormCellDataManagerInputProtocol: class
@@ -60,6 +64,7 @@ protocol SimpleFormCellAPIDataManagerInputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
+    func numberOfCells (completionHandler: (ListOfCellsInfo?, NSError?)->() )
 }
 
 protocol SimpleFormCellLocalDataManagerInputProtocol: class

@@ -12,4 +12,8 @@ class SimpleFormCellInteractor: SimpleFormCellInteractorInputProtocol
     var localDatamanager: SimpleFormCellLocalDataManagerInputProtocol?
     
     init() {}
+    
+    func numberOfCells (completionHandler: (ListOfCellsInfo?, NSError?)->() ) {
+        APIDataManager?.numberOfCells(completionHandler)
+    }
 }

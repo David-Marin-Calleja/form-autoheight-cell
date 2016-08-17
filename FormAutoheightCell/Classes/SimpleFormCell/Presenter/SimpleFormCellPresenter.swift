@@ -12,4 +12,13 @@ class SimpleFormCellPresenter: SimpleFormCellPresenterProtocol, SimpleFormCellIn
     var wireFrame: SimpleFormCellWireFrameProtocol?
     
     init() {}
+    
+    func setupWireFrame(theView: SimpleFormCellViewProtocol) {
+        wireFrame = SimpleFormCellWireFrame()
+        SimpleFormCellWireFrame.presentSimpleFormCellModule(fromView: theView, presenter: self)
+    }
+    
+    func numberOfCells (completionHandler: (ListOfCellsInfo?, NSError?)->() ) {
+        interactor?.numberOfCells(completionHandler)
+    }
 }

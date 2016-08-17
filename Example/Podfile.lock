@@ -1,18 +1,27 @@
 PODS:
+  - Alamofire (3.4.1)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
   - FBSnapshotTestCase (2.1.2):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
   - FBSnapshotTestCase/Core (2.1.2)
   - FBSnapshotTestCase/SwiftSupport (2.1.2):
     - FBSnapshotTestCase/Core
-  - FormAutoheightCell (0.1.1)
+  - FormAutoheightCell (0.1.1):
+    - Alamofire
+    - AlamofireObjectMapper
   - Nimble (3.2.0)
   - Nimble-Snapshots (4.1.0):
     - FBSnapshotTestCase (~> 2.0)
     - Nimble
     - Quick
+  - ObjectMapper (1.4.0)
   - Quick (0.9.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - AlamofireObjectMapper (~> 3.0)
   - FBSnapshotTestCase
   - FormAutoheightCell (from `../`)
   - Nimble (~> 3.0)
@@ -24,12 +33,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
   FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
-  FormAutoheightCell: f94a7537c8263af03583c34bb8ec37491b89a730
+  FormAutoheightCell: ac3f466c5ed989e364d764fe58b187d4b5d0a796
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
-PODFILE CHECKSUM: 25bd5394d54ce552f458069362408e073b1abefd
+PODFILE CHECKSUM: 1d071f8f0ece37209dd694671733d0eaedd5ead1
 
 COCOAPODS: 1.0.1
