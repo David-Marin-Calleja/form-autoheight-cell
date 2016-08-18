@@ -8,7 +8,7 @@ import UIKit
 
 class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
 {
-    static let CELL_IDENTIFIER = "form_cell_identifier"
+    static let CELL_IDENTIFIER = "word_and_translate_cell_identifier"
     
     var presenter: SimpleFormCellPresenterProtocol?
     var values: ListOfCellsInfo?
@@ -16,10 +16,13 @@ class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.contentInset = UIEdgeInsetsMake(80, 0, 0, 0)
+        // Top margin
+//        self.tableView.contentInset = UIEdgeInsetsMake(80, 0, 0, 0)
         
+        // Refresh
         self.refreshControl?.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         
+        // Initial setup-VIPER
         if (presenter == nil) {
             presenter = SimpleFormCellPresenter()
             presenter?.setupWireFrame(self)
@@ -32,7 +35,7 @@ class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
         if let bundleURL = podBundle.URLForResource("FormAutoheightCell", withExtension: "bundle") {
             
             if let bundle = NSBundle(URL: bundleURL) {
-                let cellNib = UINib(nibName: "SimpleFormCell", bundle: bundle)
+                let cellNib = UINib(nibName: "WordAndTranslateCell", bundle: bundle)
                 tableView.registerNib(cellNib, forCellReuseIdentifier: AutoheightTableView.CELL_IDENTIFIER)
             } else {
                 assertionFailure("Could not load the bundle")
@@ -40,7 +43,10 @@ class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
         }else {
             assertionFailure("Could not create a path to the bundle")
         }
-        
+
+        // Auto-height cell
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 315
     }
     
     // MARK: - Private Methods
@@ -63,10 +69,10 @@ class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
     }
     
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let theValue = values {
-            return (theValue.items?.count)!
-        }
-        return 1
+//        if let theValue = values {
+//            return (theValue.items?.count)!
+//        }
+        return 2
     }
     
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -74,11 +80,12 @@ class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
         let cell = tableView.dequeueReusableCellWithIdentifier(AutoheightTableView.CELL_IDENTIFIER, forIndexPath: indexPath) as UITableViewCell
         
         // Configure the cell...
-        if let theValue = values {
-            cell.textLabel?.text = theValue.items![indexPath.row].title;
-        } else {
-            cell.textLabel?.text = "Loading..."
-        }
+//        if let theValue = values {
+//            cell.textLabel?.text = theValue.items![indexPath.row].title;
+//        } else {
+//            cell.textLabel?.text = "Loading..."
+//        }
+        cell.selectionStyle = .None
         
         return cell
     }
@@ -92,4 +99,8 @@ class AutoheightTableView: UITableViewController, SimpleFormCellViewProtocol
         }
     }
     
+    override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+        return 200
+    }
 }
